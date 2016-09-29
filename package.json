@@ -17,8 +17,11 @@
     "yeoman-generator"
   ],
   "dependencies": {
-    "yeoman-generator": "^0.24.1",
     "chalk": "^1.0.0",
+    "mkdirp": "^0.5.1",
+    "react-webpack-template": "^1.0.0",
+    "yeoman-generator": "^0.24.1",
+    "yeoman-welcome": "^1.0.1",
     "yosay": "^1.0.0"
   },
   "devDependencies": {
@@ -42,7 +45,7 @@
       "mocha": true
     }
   },
-  "repository": "djimenezc/generator-documents",
+  "repository": "djimenezc/generator-washemo-20",
   "scripts": {
     "prepublish": "gulp prepublish",
     "test": "gulp"

@@ -1,0 +1,101 @@
+{
+  "path": {
+    "options": [
+      {
+        "name": "base",
+        "path": "src"
+      },
+      {
+        "name": "action",
+        "path": "src/actions"
+      },
+      {
+        "name": "component",
+        "path": "src/components"
+      },
+      {
+        "name": "image",
+        "path": "src/images"
+      },
+      {
+        "name": "source",
+        "path": "src/sources"
+      },
+      {
+        "name": "store",
+        "path": "src/stores"
+      },
+      {
+        "name": "style",
+        "path": "src/styles"
+      },
+      {
+        "name": "test",
+        "path": "test"
+      },
+      {
+        "name": "dist",
+        "path": "dist"
+      }
+    ]
+  },
+  "postcss": {
+    "options": [
+      {
+        "name": "postcss",
+        "value": "postcss",
+        "packages": [
+          { "name": "postcss", "version": "^5.0.11" },
+          { "name": "postcss-loader", "version": "^0.8.0" }
+        ]
+      }
+    ]
+  },
+  "style": {
+    "options": [
+      {
+        "name": "css",
+        "value": "css",
+        "suffix": ".css"
+      },
+      {
+        "name": "sass",
+        "value": "sass",
+        "suffix": ".sass",
+        "packages": [
+          { "name": "sass-loader", "version": "^3.1.2" },
+          { "name": "node-sass", "version": "^3.4.2" }
+        ]
+      },
+      {
+        "name": "scss",
+        "value": "scss",
+        "suffix": ".scss",
+        "packages": [
+          { "name": "sass-loader", "version": "^3.1.2" },
+          { "name": "node-sass", "version": "^3.4.2" }
+        ]
+      },
+      {
+        "name": "less",
+        "value": "less",
+        "suffix": ".less",
+        "packages": [
+          { "name": "less-loader", "version": "^2.0.0" },
+          { "name": "less", "version": "^2.5.3" }
+        ]
+      },
+      {
+        "name": "stylus",
+        "value": "stylus",
+        "suffix": ".styl",
+        "packages": [
+          { "name": "stylus-loader", "version": "^0.5.0" },
+          { "name": "stylus", "version": "~0.49.2" },
+          { "name": "nib", "version": "~1.0.4" }
+        ]
+      }
+    ],
+    "default": "css"
+  }
+}
