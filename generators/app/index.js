@@ -12,6 +12,7 @@ const packageInfo = require('../../package.json');
 
 // Set the base root directory for our files
 let baseRootPath = path.dirname(require.resolve('react-webpack-template'));
+let appFolder = '';
 
 //noinspection JSUnusedGlobalSymbols
 module.exports = generators.Base.extend({
@@ -52,7 +53,7 @@ module.exports = generators.Base.extend({
 
     var prompts = [{
       type: 'input',
-      name: 'name',
+      name: 'appName',
       message: 'Please choose your application name',
       default: utils.yeoman.getAppName()
     }];
@@ -62,9 +63,11 @@ module.exports = generators.Base.extend({
       this.props = props;
 
       // Make sure to get the correct app name if it is not the default
-      if(props.appName !== utils.yeoman.getAppName()) {
+      if (props.appName !== utils.yeoman.getAppName()) {
         props.appName = utils.yeoman.getAppName(props.appName);
       }
+
+      this.log('name ', props.appName);
 
       // Set needed global vars for yo
       this.appName = props.appName;
@@ -84,11 +87,13 @@ module.exports = generators.Base.extend({
     }.bind(this));
   },
 
-  configuring: function() {
+  configuring: function () {
 
-    this.log('creating folder structure');
+    this.log('creating folder structure at ', this.appName);
 
     mkdirp.sync(this.appName);
+
+    appFolder = path.join(process.cwd(), this.appName);
 
     // Generate our package.json. Make sure to also include the required dependencies for styles
     let defaultSettings = this.fs.readJSON(path.join(baseRootPath, 'package.json'));
@@ -106,17 +111,17 @@ module.exports = generators.Base.extend({
       dependencies: defaultSettings.dependencies
     };
 
-    this.fs.writeJSON(this.destinationPath('package.json'), packageSettings);
+    this.fs.writeJSON(this.destinationPath(appFolder + '/package.json'), packageSettings);
   },
 
   writing: function () {
     //Copy the configuration files
-    this.fs.copyTpl(
-      this.templatePath('_package.json'),
-      this.destinationPath('package.json'), {
-        name: this.props.name
-      }
-    );
+    // this.fs.copyTpl(
+    //   this.templatePath('_package.json'),
+    //   this.destinationPath('package.json'), {
+    //     name: this.props.name
+    //   }
+    // );
 
     //Copy application files
 
@@ -125,7 +130,7 @@ module.exports = generators.Base.extend({
   },
 
   install: function () {
-    if(!this.options['skip-install']) {
+    if (!this.options['skip-install']) {
       this.installDependencies();
     }
   }
