@@ -1,4 +1,8 @@
+'use strict';
+
 var generators = require('yeoman-generator');
+var chalk = require('chalk');
+var yosay = require('yosay');
 
 module.exports = generators.Base.extend({
   // The name `constructor` is important here
@@ -10,10 +14,41 @@ module.exports = generators.Base.extend({
     this.option('coffee'); // This method adds support for a `--coffee` flag
   },
 
-  method1: function () {
-    console.log('method 1 just ran');
+  prompting: function () {
+    // Have Yeoman greet the user.
+    this.log(yosay(
+      'Welcome to the great ' + chalk.red('generator-documents') + ' generator!'
+    ));
+
+    var prompts = [{
+      type: 'confirm',
+      name: 'someAnswer',
+      message: 'Would you like to enable this option?',
+      default: true
+    }];
+
+    return this.prompt(prompts).then(function (props) {
+      // To access props later use this.props.someAnswer;
+      this.props = props;
+    }.bind(this));
   },
-  method2: function () {
-    console.log('method 2 just ran');
+
+  writing: function () {
+    //Copy the configuration files
+    this.fs.copyTpl(
+      this.templatePath('_package.json'),
+      this.destinationPath('package.json'), {
+        name: this.props.name
+      }
+    );
+
+    //Copy application files
+
+    //Install Dependencies
+
+  },
+
+  install: function () {
+    this.installDependencies();
   }
 });

@@ -1,6 +1,46 @@
+# generator-documents [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+> description david
+
+## Installation
+
+First, install [Yeoman](http://yeoman.io) and generator-documents using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+
+```bash
+npm install -g yo
+npm install -g generator-documents
+```
+
+Then generate your new project:
+
+```bash
+yo documents
+```
+
+## Getting To Know Yeoman
+
+ * Yeoman has a heart of gold.
+ * Yeoman is a person with feelings and opinions, but is very easy to work with.
+ * Yeoman can be too opinionated at times but is easily convinced not to be.
+ * Feel free to [learn more about Yeoman](http://yeoman.io/).
+
+## License
+
+MIT © [david](home page)
+
+
+[npm-image]: https://badge.fury.io/js/generator-documents.svg
+[npm-url]: https://npmjs.org/package/generator-documents
+[travis-image]: https://travis-ci.org/djimenezc/generator-documents.svg?branch=master
+[travis-url]: https://travis-ci.org/djimenezc/generator-documents
+[daviddm-image]: https://david-dm.org/djimenezc/generator-documents.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/djimenezc/generator-documents
+[coveralls-image]: https://coveralls.io/repos/djimenezc/generator-documents/badge.svg
+[coveralls-url]: https://coveralls.io/r/djimenezc/generator-documents
+
 
 The generator was created following the instructions found at
     - http://yeoman.io/authoring/
+    - https://scotch.io/tutorials/create-a-custom-yeoman-generator-in-4-easy-steps
     
 
 ##Setting up as a node module
