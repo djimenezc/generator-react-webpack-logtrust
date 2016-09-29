@@ -1,0 +1,14 @@
+{
+  "name": "generator-washemo-20",
+  "version": "0.1.0",
+  "description": "Generador de aplicaciones verticales de Logtrust",
+  "files": [
+    "generator/app"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^0.24.1"
+  }
+}
