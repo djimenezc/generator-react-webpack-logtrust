@@ -11,8 +11,8 @@ let fs = require('fs');
 const packageInfo = require('../../package.json');
 
 // Set the base root directory for our files
-let baseRootPath = path.dirname(require.resolve('react-webpack-template'));
-let appFolder = '';
+// let baseRootPath = path.dirname(require.resolve('react-webpack-template'));
+let appFolder;
 
 //noinspection JSUnusedGlobalSymbols
 module.exports = generators.Base.extend({
@@ -36,7 +36,6 @@ module.exports = generators.Base.extend({
 
     // Use our plain template as source
     // this.sourceRoot(baseRootPath);
-
   },
 
   initializing: function () {
@@ -50,13 +49,6 @@ module.exports = generators.Base.extend({
   },
 
   prompting: function () {
-
-    var prompts = [{
-      type: 'input',
-      name: 'appName',
-      message: 'Please choose your application name',
-      default: utils.yeoman.getAppName()
-    }];
 
     return this.prompt(prompts).then(function (props) {
       // To access props later use this.props.someAnswer;
@@ -93,10 +85,14 @@ module.exports = generators.Base.extend({
 
     mkdirp.sync(this.appName);
 
-    appFolder = path.join(process.cwd(), this.appName);
+    // appFolder = path.join(process.cwd(), this.appName);
 
     // Generate our package.json. Make sure to also include the required dependencies for styles
-    let defaultSettings = this.fs.readJSON(path.join(baseRootPath, 'package.json'));
+    // let defaultSettings = this.fs.readJSON(path.join(baseRootPath, 'package.json'));
+    const packageSourceFile = this.templatePath('package.json');
+    this.log('package file', [packageSourceFile]);
+    let defaultSettings = this.fs.readJSON(packageSourceFile);
+
     let packageSettings = {
       name: this.appName,
       private: true,
@@ -111,21 +107,52 @@ module.exports = generators.Base.extend({
       dependencies: defaultSettings.dependencies
     };
 
-    this.fs.writeJSON(this.destinationPath(appFolder + '/package.json'), packageSettings);
+    this.fs.writeJSON(this.destinationPath(this.appName + '/package.json'), packageSettings);
   },
 
   writing: function () {
-    //Copy the configuration files
+    // Copy the configuration files
     // this.fs.copyTpl(
     //   this.templatePath('_package.json'),
-    //   this.destinationPath('package.json'), {
+    //   this.destinationPath('package1.json'), {
     //     name: this.props.name
     //   }
     // );
 
-    //Copy application files
+    let excludeList = [
+      'LICENSE',
+      'README.md',
+      'CHANGELOG.md',
+      'node_modules',
+      'package.json',
+      '.travis.yml',
+      'cfg'
+    ];
 
-    //Install Dependencies
+    // Get all files in our repo and copy the ones we should
+    // fs.readdir(this.templatePath(), (err, items) => {
+    //
+    //   for (let item of items) {
+    //
+    //     // Skip the item if it is in our exclude list
+    //     if (excludeList.indexOf(item) !== -1) {
+    //       continue;
+    //     }
+    //
+    //     // Copy all items to our root
+    //     let fullPath = path.join(baseRootPath, item);
+    //     console.log('fullPath ', fullPath);
+    //     if (fs.lstatSync(fullPath).isDirectory()) {
+    //       this.bulkDirectory(item, item);
+    //     } else {
+    //       if (item === '.npmignore') {
+    //         this.copy(item, '.gitignore');
+    //       } else {
+    //         this.copy(item, item);
+    //       }
+    //     }
+    //   }
+    // });
 
   },
 
