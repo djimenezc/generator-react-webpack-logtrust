@@ -141,8 +141,9 @@ module.exports = generators.Base.extend({
   install: function () {
     if (!this.options['skip-install']) {
 
-      this.runInstall('npm',[], {
-
+      debugger;
+      this.runInstall('npm', [], {
+        prefix: this.destinationPath(this.appName)
       });
     }
   }
