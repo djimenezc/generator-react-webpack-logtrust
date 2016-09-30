@@ -54,7 +54,7 @@ First, create a folder within which you'll write your generator. This folder mus
 
 Once inside your generator folder, create a package.json file. This file is a Node.js module manifest. You can generate this file by running npm init from your command line or by entering the following manually:
 
-~~~~
+~~~~json
 {
   "name": "generator-name",
   "version": "0.1.0",
@@ -88,7 +88,7 @@ Sub-generators, used when you call yo name:subcommand, are stored in folders nam
 
 In an example project, a directory tree could look like this:
 
-~~~~
+~~~~json
 ├───package.json
 └───generators/
     ├───app/
@@ -99,7 +99,7 @@ In an example project, a directory tree could look like this:
 
 If you use this second directory structure, make sure you point the files property in your package.json at the generators folder.
 
-~~~~
+~~~~json
 {
   "files": [
     "generators/app",
@@ -116,7 +116,7 @@ Yeoman offers a base generator which you can extend to implement your own behavi
 
 Here's how you extend the base generator:
 
-```
+```javascript
 var generators = require('yeoman-generator');
 
 module.exports = generators.Base.extend();
@@ -136,7 +136,7 @@ Some generator methods can only be called inside the constructor function. These
 
 To override the generator constructor, you pass a constructor function to extend() like so:
 
-```
+```javascript
 module.exports = generators.Base.extend({
   // The name `constructor` is important here
   constructor: function () {
@@ -155,7 +155,7 @@ Every method added to the prototype is run once the generator is called--and usu
 
 Let's add some methods:
 
-```
+```javascript
 module.exports = generators.Base.extend({
   method1: function () {
     console.log('method 1 just ran');
@@ -176,7 +176,7 @@ Since you're developing the generator locally, it's not yet available as a globa
 
 On the command line, from the root of your generator project (in the generator-name/ folder), type:
 
-```
+```bash
 npm link
 ```
 
@@ -197,3 +197,45 @@ So, if your generator is not running in your current working directory, make sur
 After reading this, you should be able to create a local generator and run it.
 
 If this is your first time writing a generator, you should definitely read the next section on running context and the run loop. This section is vital to understanding the context in which your generator will run, and to ensure that it will compose well with other generators in the Yeoman ecosystem. The other sections of the documentation will present functionality available within the Yeoman core to help you achieve your goals.
+
+
+#The run loop
+
+Running tasks sequentially is alright if there's a single generator. But it is not enough once you start composing generators together.
+
+That's why Yeoman uses a run loop.
+
+The run loop is a queue system with priority support. We use the Grouped-queue module to handle the run loop.
+
+Priorities are defined in your code as special prototype method names. When a method name is the same as a priority name, the run loop pushes the method into this special queue. If the method name doesn't match a priority, it is pushed in the default group.
+
+In code, it will look this way:
+
+```javascript
+generators.Base.extend({
+  priorityName: function () {}
+});
+```
+
+You can also group multiple methods to be run together in a queue by using a hash instead of a single method:
+
+```javascript
+generators.Base.extend({
+  priorityName: {
+    method: function () {},
+    method2: function () {}
+  }
+});
+```
+The available priorities are (in running order):
+
+* initializing - Your initialization methods (checking current project state, getting configs, etc)
+* prompting - Where you prompt users for options (where you'd call this.prompt())
+* configuring - Saving configurations and configure the project (creating .editorconfig files and other metadata files)
+* default - If the method name doesn't match a priority, it will be pushed to this group.
+* writing - Where you write the generator specific files (routes, controllers, etc)
+* conflicts - Where conflicts are handled (used internally)
+* install - Where installation are run (npm, bower)
+* end - Called last, cleanup, say good bye, etc
+
+Follow these priorities guidelines and your generator will play nice with others.

@@ -9,7 +9,8 @@
     "url": "home page"
   },
   "files": [
-    "generator/app"
+    "generator/app",
+    "generator/verticalAppLegacy"
   ],
   "main": "generators/index.js",
   "keywords": [
