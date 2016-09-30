@@ -14,11 +14,5 @@ module.exports = [
     message: 'Which type of vertical app do you want to build?',
     choices: utils.config.getChoices('verticalAppTypes'),
     default: utils.config.getDefaultChoice('verticalAppTypes')
-  },
-  // {
-  //   type: 'confirm',
-  //   name: 'postcss',
-  //   message: 'Enable postcss?',
-  //   default: false
-  // }
+  }
 ];

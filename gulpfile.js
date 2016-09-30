@@ -22,7 +22,10 @@ gulp.task('nsp', function (cb) {
 });
 
 gulp.task('pre-test', function () {
-  return gulp.src('generators/**/*.js')
+  return gulp.src([
+    'generators/**/*.js',
+    '!generators/**/templates/**'
+  ])
     .pipe(excludeGitIgnore())
     .pipe(istanbul({
       includeUntested: true
