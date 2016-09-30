@@ -2,7 +2,7 @@
 var path = require('path');
 var gulp = require('gulp');
 var eslint = require('gulp-eslint');
-var excludeGitignore = require('gulp-exclude-gitignore');
+var excludeGitIgnore = require('gulp-exclude-gitignore');
 var mocha = require('gulp-mocha');
 var istanbul = require('gulp-istanbul');
 var nsp = require('gulp-nsp');
@@ -11,7 +11,7 @@ var coveralls = require('gulp-coveralls');
 
 gulp.task('static', function () {
   return gulp.src('**/*.js')
-    .pipe(excludeGitignore())
+    .pipe(excludeGitIgnore())
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
@@ -23,7 +23,7 @@ gulp.task('nsp', function (cb) {
 
 gulp.task('pre-test', function () {
   return gulp.src('generators/**/*.js')
-    .pipe(excludeGitignore())
+    .pipe(excludeGitIgnore())
     .pipe(istanbul({
       includeUntested: true
     }))

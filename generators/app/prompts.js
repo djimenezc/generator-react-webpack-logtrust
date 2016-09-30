@@ -2,12 +2,12 @@
 const utils = require('../../utils/all');
 
 module.exports = [
-  // {
-  //   type: 'input',
-  //   name: 'appName',
-  //   message: 'Please choose your application name',
-  //   default: utils.yeoman.getAppName()
-  // },
+  {
+    type: 'input',
+    name: 'appName',
+    message: 'Please choose your application name',
+    default: utils.yeoman.getAppName()
+  }
   // {
   //   type: 'list',
   //   name: 'style',
