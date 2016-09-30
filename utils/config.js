@@ -11,13 +11,28 @@ let getSetting = (setting) => {
 };
 
 /**
+ * Create nameDescription field
+ * @param choices
+ */
+let addMessage = function (choices) {
+  choices.options = choices.options.map(
+    function(element) {
+      element.name += ` ---- ${element.message}`;
+      return element
+    }
+  );
+
+  return choices;
+};
+
+/**
  * Get choices for a given setting
  * @param  {String} setting
  * @return {Mixed} Result or null if nothing was found
  */
 let getChoices = function getChoices(setting) {
 
-  let config = getSetting(setting);
+  let config = addMessage(getSetting(setting));
   return config && Array.isArray(config.options) ? config.options : null;
 };
 

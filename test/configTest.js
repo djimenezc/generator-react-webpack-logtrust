@@ -14,4 +14,12 @@ describe('config', function () {
 
     assert.equal(actual, expected, 'getDefaultChoice fetch successfully!!!');
   });
+
+  it('getChoices with the description in the name field', function () {
+
+    const actual = config.getChoices('verticalAppTypes');
+    const expected = 'PoC ---- ';
+
+    assert.ok(actual[0].name.indexOf(expected) !== -1, 'getDefaultChoice fetch successfully!!!');
+  });
 });
