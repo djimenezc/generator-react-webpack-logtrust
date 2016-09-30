@@ -8,7 +8,7 @@ let opts = require('./configopts.json');
  */
 let getSetting = (setting) => {
   return opts[setting] !== undefined ? opts[setting] : null;
-}
+};
 
 /**
  * Get choices for a given setting
@@ -19,7 +19,7 @@ let getChoices = function getChoices(setting) {
 
   let config = getSetting(setting);
   return config && Array.isArray(config.options) ? config.options : null;
-}
+};
 
 /**
  * Get the wanted choice by key
@@ -45,7 +45,7 @@ let getChoiceByKey = (setting, key) => {
   }
 
   return result;
-}
+};
 
 /**
  * Get the default choice for a config setting
@@ -55,7 +55,7 @@ let getChoiceByKey = (setting, key) => {
 let getDefaultChoice = (setting) => {
   let config = getSetting(setting);
   return config && config.default !== undefined && config.default.length > 0 ? config.default : null;
-}
+};
 
 module.exports = {
   getSetting,

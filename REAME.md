@@ -16,6 +16,9 @@ Then generate your new project:
 yo documents
 ```
 
+To debug the yeoman generator follow the instructions of this thread at StackOverflow:
+- http://stackoverflow.com/questions/14469515/how-to-npm-install-to-a-specified-directory
+
 ## Getting To Know Yeoman
 
  * Yeoman has a heart of gold.
