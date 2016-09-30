@@ -51,7 +51,8 @@
   "repository": "djimenezc/generator-washemo-20",
   "scripts": {
     "prepublish": "gulp prepublish",
-    "test": "gulp"
+    "test": "gulp",
+    "test:watch": "gulp default watch"
   },
   "license": "MIT"
 }

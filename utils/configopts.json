@@ -39,41 +39,44 @@
       }
     ]
   },
-  "postcss": {
-    "options": [
-      {
-        "name": "POC",
-        "value": "POC",
-        "packages": [
-          { "name": "postcss", "version": "^5.0.11" },
-          { "name": "postcss-loader", "version": "^0.8.0" }
-        ]
-      }
-    ]
-  },
   "verticalAppTypes": {
     "options": [
       {
         "name": "PoC",
         "value": "poc",
-        "description": "Pruebas de concepto para cuando estamos queriendo enseñar a un cliente"
+        "message": "Pruebas de concepto para cuando estamos queriendo enseñar a un cliente"
       },
       {
-        "name": "reseller",
+        "name": "Reseller",
         "value": "reseller",
-        "description": "Cuando una app es para todos los dominios de un reseller"
+        "message": "Cuando una app es para todos los dominios de un reseller"
       },
       {
-        "name": "generic",
+        "name": "Generic",
         "value": "generic",
-        "description": "App servirá para varios dominios (por ejemplo el firewall report) "
+        "message": "App servirá para varios dominios (por ejemplo el firewall report) "
       },
       {
-        "name": "custom",
+        "name": "Custom",
         "value": "custom",
-        "description": "App que sube nuestro equipo o terceros para clientes"
+        "message": "App que sube nuestro equipo o terceros para clientes"
       }
     ],
     "default": "poc"
+  },
+  "verticalAppTemplate": {
+    "options": [
+      {
+        "name": "Simple",
+        "value": "simple",
+        "message": "The simplest template"
+      },
+      {
+        "name": "Full",
+        "value": "full",
+        "message": "Cuando una app es para todos los dominios de un reseller"
+      }
+    ],
+    "default": "simple"
   }
 }

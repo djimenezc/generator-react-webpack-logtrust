@@ -1,0 +1,1127 @@
+<link rel="stylesheet" type="text/css" media="all" href="../appStyles/style.css">
+<link rel="stylesheet" type="text/css" media="all" href="../appStyles/theme-dark.css">
+<link rel="stylesheet" type="text/css" media="all" href="../appStyles/theme-light.css">
+
+
+<div class="lt-vapp">
+
+    <header class="lt-vapp-header small">
+        <hgroup>
+            <h1 class="lt-vapp-company_logo"></h1>
+            <h2  class="lt-vapp-application_name">David simple app</h2>
+        </hgroup>
+        <figure class="lt-vapp-logtrust-powered">
+            <figcaption>Powered by</figcaption>
+            <span class="lticon-logo_full"></span>
+        </figure>
+        <aside class="lt-vapp-details">Lorem ipsum dolor sit amet</aside>
+    </header>
+
+
+    <nav class="lt-vapp-menu">
+        <img src="https://logtrust-static.s3.amazonaws.com/static/appsVerticales/themes/common/default_logo.jpg" width="125px" height="30px"/>
+        <ul class="lt-vapp-menu-main">
+            <li class="active" main="Main1">
+                <p class="lt-vapp-menu-item-name">
+                    <i class="lticon-analytics_presentation_statistics_graph"></i>
+                    <span>Doc 1</span>
+                </p>
+            </li>
+            <li main="Main2">
+                <p class="lt-vapp-menu-item-name">
+                    <i class="lticon-analytics_presentation_statistics_graph"></i>
+                    <span>Doc 2</span>
+                </p>
+                <nav class="lt-vapp-menu-scroll">
+                    <p class="lt-vapp-menu-scroll-titles">
+                        <strong>Acceso rápido</strong>
+                        <span>Desplázate hasta una de las secciones:</span>
+                    </p>
+                    <ul>
+                        <li section="Section21">Title 1</li>
+                        <li section="Section22">Title 2</li>
+                    </ul>
+                </nav>
+            </li>
+            <li main="Main3">
+                <p class="lt-vapp-menu-item-name">
+                    <i class="lticon-analytics_presentation_statistics_graph"></i>
+                    <span>Doc 3</span>
+                </p>
+            </li>
+        </ul>
+
+        <ul class="lt-vapp-menu-preferences">
+            <li class="lt-vapp-capture-button" title="Capturar la aplicación completa">
+                <span class="lticon-polaroid_picture_image_photo"></span>
+            </li>
+            <li class="lt-vapp-options-button va-menu-trigger" title="Configuración general">
+                <span class="lticon-settings_gear_preferences"></span>
+            </li>
+        </ul>
+    </nav>
+
+    <nav class="lt-vapp-config">
+        <p class="lt-vapp-config-bar">
+            <i class="lt-vapp-config-close LtAppIcon-close2"></i>
+            <span>Cerrar</span>
+        </p>
+
+        <h4>
+            <i class="lticon-settings_gear_preferences"></i>
+            <span>Panel de configuración</span>
+        </h4>
+
+        <div class="lt-vapp-config-form-wrapper">
+
+            <form class="lt-form under-label">
+                <h3 class="lt-form-title">Ajustes visuales</h3>
+
+                <div class="lt-form-column-wrapper">
+                    <div class="lt-form-column">
+                        <fieldset class="lt-form-group">
+                            <div class="lt-form-field">
+                                <label>Tema</label>
+                                <select id="theme">
+                                    <option value="theme-light">Claro</option>
+                                    <option value="theme-dark" selected>Oscuro</option>
+                                </select>
+                            </div>
+                            <div class="lt-form-field">
+                                <label>Tamaño de títulos</label>
+                                <select id="titleSize">
+                                    <option value="small-headers">Pequeño</option>
+                                    <option value="" selected>Normal</option>
+                                    <option value="big-headers">Grande</option>
+                                </select>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div class="lt-form-column">
+                        <fieldset class="lt-form-group">
+                            <div class="lt-form-field-inline">
+                                <input type="checkbox" value="false" id="displayCompact">
+                                <label for="displayCompact">Vista de aplicación en modo compacto</label>
+                            </div>
+
+                            <div class="lt-form-field-inline">
+                                <input type="checkbox" value="false" id="displayBordered">
+                                <label for="displayBordered">Títulos de sección con borde inferior</label>
+                            </div>
+
+                            <div class="lt-form-field-inline">
+                                <input type="checkbox" value="true" id="displayCollapsibles" checked>
+                                <label for="displayCollapsibles">Secciones y widgets contraíbles</label>
+                            </div>
+
+                            <div class="lt-form-field-inline">
+                                <input type="checkbox" value="true" id="displayDescription" checked>
+                                <label for="displayDescription">Mostrar descripciones de widgets</label>
+                            </div>
+
+                            <div class="lt-form-field-inline">
+                                <input type="checkbox" value="false" id="displayMenuWidgetsExpanded">
+                                <label for="displayMenuWidgetsExpanded">Opciones de widget siempre visibles</label>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+
+<!--                <div class="lt-form-column-wrapper tv_mode">
+                    <div class="lt-form-column">
+                        <h3 class="lt-form-title">Modo pantalla de TV</h3>
+                    </div>
+                    <div class="lt-form-column">
+                        <div class="lt-form-field">
+                            <button class="black">ACTIVAR</button>
+                        </div>
+                    </div>
+                </div>-->
+
+                <div class="lt-form-column-wrapper">
+                    <div class="lt-form-column">
+                        <fieldset class="lt-form-group">
+                            <div class="lt-form-field">
+                                <label>Desde</label>
+
+                                <div id="custom_from_date" class="selectWrapper">
+                                    <input type="hidden" value=""/>
+
+                                    <div class="dropArrowDown">
+                                        <span class="LtAppIcon-arrow_down"></span>
+                                    </div>
+                                    <span class="custom_from_date_container"></span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div class="lt-form-column">
+                        <fieldset class="lt-form-group">
+                            <div class="lt-form-field dataRangeConfig">
+                                <label>Hasta</label>
+
+                                <div id="custom_to_date" class="selectWrapper">
+                                    <input type="hidden" value="">
+
+                                    <div class="dropArrowDown">
+                                        <span class="LtAppIcon-arrow_down"></span>
+                                    </div>
+                                    <span class="custom_to_date_container"></span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="lt-vapp-config-footer">
+            <button class="lt-vapp-config-close grey">Cancelar</button>
+            <button class="okConfiguration">Actualizar</button>
+        </div>
+    </nav>
+
+    <main class="lt-vapp-main" toMain="Main1">
+
+        <section class="lt-vapp-section" toSection="Section11">
+            <h3 class="lt-vapp-section-title">
+                <i class="lticon-analytics_presentation_statistics_graph"></i>
+                <span>Title 1</span>
+                <span class="lt-vapp-section-collapser lticon-vapp_expand"></span>
+            </h3>
+
+            <article class="lt-vapp-widget md-6 lg-4 tv-4">
+                <header class="lt-vapp-widget-header">
+                    <h3>Widget 1 Title</h3>
+                    <p>Widget Description</p>
+                    <nav class="lt-vapp-widget-options">
+                        <span class="lt-vapp-widget-collapser lticon-vapp_expand"></span>
+                        <span class="lt-vapp-widget-menu-launcher lticon-thin-0069a_menu_hambuger_bold"></span>
+                        <ul>
+                            <li>
+                                <i class="lticon-polaroid_picture_image_photo"></i>
+                                <span>Capturar gráfico</span>
+                            </li>
+                            <li>
+                                <i class="lticon-computer_laptop_download"></i>
+                                <span>Descargar datos</span>
+                            </li>
+                            <li>
+                                <i class="lticon-search_find_zoom2"></i>
+                                <span>Zoom</span>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+                <div class="lt-vapp-widget-graphic with-filter">
+                    <div class="lt-vapp-widget-filter">
+                        <select>
+                            <option>Filtro 1</option>
+                        </select>
+                        <select>
+                            <option>Filtro 2</option>
+                        </select>
+                    </div>
+                </div>
+            </article>
+
+            <article class="lt-vapp-widget md-6 lg-4 tv-4">
+                <header class="lt-vapp-widget-header">
+                    <h3>Widget 2 Title</h3>
+                    <p>Widget Description</p>
+                    <nav class="lt-vapp-widget-options">
+                        <span class="lticon-information_about displayMoreInfo" about="ejemplo"></span>
+                        <span class="lt-vapp-widget-collapser lticon-vapp_expand"></span>
+                        <span class="lt-vapp-widget-menu-launcher lticon-thin-0069a_menu_hambuger_bold"></span>
+                        <ul>
+                            <li>
+                                <i class="lticon-polaroid_picture_image_photo"></i>
+                                <span>Capturar gráfico</span>
+                            </li>
+                            <li>
+                                <i class="lticon-computer_laptop_download"></i>
+                                <span>Descargar datos</span>
+                            </li>
+                            <li>
+                                <i class="lticon-search_find_zoom2"></i>
+                                <span>Zoom</span>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+                <div class="lt-vapp-widget-graphic" id="widget1"></div>
+            </article>
+
+            <article class="lt-vapp-widget lg-4 tv-4">
+                <header class="lt-vapp-widget-header">
+                    <h3>Widget 3 Title</h3>
+                    <p>Widget Description</p>
+                    <nav class="lt-vapp-widget-options">
+                        <span class="lt-vapp-widget-collapser lticon-vapp_expand"></span>
+                        <span class="lt-vapp-widget-menu-launcher lticon-thin-0069a_menu_hambuger_bold"></span>
+                        <ul>
+                            <li>
+                                <i class="lticon-polaroid_picture_image_photo"></i>
+                                <span>Capturar gráfico</span>
+                            </li>
+                            <li>
+                                <i class="lticon-computer_laptop_download"></i>
+                                <span>Descargar datos</span>
+                            </li>
+                            <li>
+                                <i class="lticon-search_find_zoom2"></i>
+                                <span>Zoom</span>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+                <div class="lt-vapp-widget-graphic"></div>
+            </article>
+
+            <article class="lt-vapp-highlight">
+
+                <div class="lt-vapp-highlight-item lg-4">
+                    <span class="lt-vapp-highlight-icon lticon-time_watch_clock_wall"></span>
+                    <div class="lt-vapp-highlight-info">
+                        <div class="lt-vapp-highlight-title">
+                            <h5>Nº de usuarios</h5>
+                            <span class="lt-vapp-highlight-details lticon-information_about" about="thisWidget"></span>
+                        </div>
+                        <h4 class="lt-vapp-highlight-data">
+                            <span class="lt-vapp-highlight-data-value">224.576</span>
+                            <span class="lt-vapp-highlight-data-unit">usuarios</span>
+                        </h4>
+                    </div>
+                </div>
+
+                <div class="lt-vapp-highlight-item lg-4">
+                    <span class="lt-vapp-highlight-icon lticon-time_watch_clock_wall"></span>
+                    <div class="lt-vapp-highlight-info">
+                        <div class="lt-vapp-highlight-title">
+                            <h5>Nº de usuarios</h5>
+                            <span class="lt-vapp-highlight-details lticon-information_about" about="thisWidget"></span>
+                        </div>
+                        <h4 class="lt-vapp-highlight-data">
+                            <span class="lt-vapp-highlight-data-value">224.576</span>
+                            <span class="lt-vapp-highlight-data-unit">usuarios</span>
+                        </h4>
+                    </div>
+                </div>
+
+                <div class="lt-vapp-highlight-item lg-4">
+                    <span class="lt-vapp-highlight-icon lticon-time_watch_clock_wall"></span>
+                    <div class="lt-vapp-highlight-info">
+                        <div class="lt-vapp-highlight-title">
+                            <h5>Nº de usuarios</h5>
+                            <span class="lt-vapp-highlight-details lticon-information_about" about="thisWidget"></span>
+                        </div>
+                        <h4 class="lt-vapp-highlight-data">
+                            <span class="lt-vapp-highlight-data-value">224.576</span>
+                            <span class="lt-vapp-highlight-data-unit">usuarios</span>
+                        </h4>
+                    </div>
+                </div>
+
+
+            </article>
+
+            <article class="lt-vapp-widget sm-6 tv-6">
+                <header class="lt-vapp-widget-header">
+                    <h3>Widget 4 Title</h3>
+                    <p>Widget Description</p>
+                    <nav class="lt-vapp-widget-options">
+                        <span class="lt-vapp-widget-collapser lticon-vapp_expand"></span>
+                        <span class="lt-vapp-widget-menu-launcher lticon-thin-0069a_menu_hambuger_bold"></span>
+                        <ul>
+                            <li>
+                                <i class="lticon-polaroid_picture_image_photo"></i>
+                                <span>Capturar gráfico</span>
+                            </li>
+                            <li>
+                                <i class="lticon-computer_laptop_download"></i>
+                                <span>Descargar datos</span>
+                            </li>
+                            <li>
+                                <i class="lticon-search_find_zoom2"></i>
+                                <span>Zoom</span>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+                <div class="lt-vapp-widget-graphic"></div>
+            </article>
+
+            <article class="lt-vapp-widget sm-6 tv-6">
+                <header class="lt-vapp-widget-header">
+                    <h3>Widget 5 Title</h3>
+                    <p>Widget Description</p>
+                    <nav class="lt-vapp-widget-options">
+                        <span class="lt-vapp-widget-collapser lticon-vapp_expand"></span>
+                        <span class="lt-vapp-widget-menu-launcher lticon-thin-0069a_menu_hambuger_bold"></span>
+                        <ul>
+                            <li>
+                                <i class="lticon-polaroid_picture_image_photo"></i>
+                                <span>Capturar gráfico</span>
+                            </li>
+                            <li>
+                                <i class="lticon-computer_laptop_download"></i>
+                                <span>Descargar datos</span>
+                            </li>
+                            <li>
+                                <i class="lticon-search_find_zoom2"></i>
+                                <span>Zoom</span>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+                <div class="lt-vapp-widget-graphic"></div>
+            </article>
+
+        </section>
+
+
+        <section class="lt-vapp-section custom-background oblique-effect" toSection="Section12">
+            <img class="lt-vapp-oblique-top" src="https://logtrust-static.s3.amazonaws.com/static/appsVerticales/themes/theme_light/img/corner_top_light.png">
+            <h3 class="lt-vapp-section-title big">
+                <i class="lticon-analytics_presentation_statistics_graph"></i>
+                <span>Title 2</span>
+                <span class="lt-vapp-section-collapser lticon-vapp_expand"></span>
+            </h3>
+
+            <article class="lt-vapp-widget sm-4">
+                <header class="lt-vapp-widget-header">
+                    <h3>Widget 9 Title</h3>
+                    <p>Widget Description</p>
+                    <nav class="lt-vapp-widget-options">
+                        <span class="lt-vapp-widget-collapser lticon-vapp_expand"></span>
+                        <span class="lt-vapp-widget-menu-launcher lticon-thin-0069a_menu_hambuger_bold"></span>
+                        <ul>
+                            <li>
+                                <i class="lticon-polaroid_picture_image_photo"></i>
+                                <span>Capturar gráfico</span>
+                            </li>
+                            <li>
+                                <i class="lticon-computer_laptop_download"></i>
+                                <span>Descargar datos</span>
+                            </li>
+                            <li>
+                                <i class="lticon-search_find_zoom2"></i>
+                                <span>Zoom</span>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+                <div class="lt-vapp-widget-graphic"></div>
+            </article>
+
+            <article class="lt-vapp-widget sm-8">
+                <header class="lt-vapp-widget-header">
+                    <h3>Widget 10 Title</h3>
+                    <p>Widget Description</p>
+                    <nav class="lt-vapp-widget-options">
+                        <span class="lt-vapp-widget-collapser lticon-vapp_expand"></span>
+                        <span class="lt-vapp-widget-menu-launcher lticon-thin-0069a_menu_hambuger_bold"></span>
+                        <ul>
+                            <li>
+                                <i class="lticon-polaroid_picture_image_photo"></i>
+                                <span>Capturar gráfico</span>
+                            </li>
+                            <li>
+                                <i class="lticon-computer_laptop_download"></i>
+                                <span>Descargar datos</span>
+                            </li>
+                            <li>
+                                <i class="lticon-search_find_zoom2"></i>
+                                <span>Zoom</span>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+                <div class="lt-vapp-widget-graphic"></div>
+            </article>
+            <img class="lt-vapp-oblique-bottom" src="https://logtrust-static.s3.amazonaws.com/static/appsVerticales/themes/theme_light/img/corner_bottom_light.png">
+        </section>
+    </main>
+
+    <main class="lt-vapp-main" toMain="Main2">
+
+        <section class="lt-vapp-section" toSection="Section21">
+            <h3 class="lt-vapp-section-title">
+                <i class="lticon-analytics_presentation_statistics_graph"></i>
+                <span>Title 1</span>
+                <span class="lt-vapp-section-collapser lticon-vapp_expand"></span>
+            </h3>
+
+            <article class="lt-vapp-widget md-6 lg-4">
+                <header class="lt-vapp-widget-header">
+                    <h3>Widget 1 Title</h3>
+                    <p>Widget Description</p>
+                    <nav class="lt-vapp-widget-options">
+                        <span class="lt-vapp-widget-collapser lticon-vapp_expand"></span>
+                        <span class="lt-vapp-widget-menu-launcher lticon-thin-0069a_menu_hambuger_bold"></span>
+                        <ul>
+                            <li>
+                                <i class="lticon-polaroid_picture_image_photo"></i>
+                                <span>Capturar gráfico</span>
+                            </li>
+                            <li>
+                                <i class="lticon-computer_laptop_download"></i>
+                                <span>Descargar datos</span>
+                            </li>
+                            <li>
+                                <i class="lticon-search_find_zoom2"></i>
+                                <span>Zoom</span>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+                <div class="lt-vapp-widget-graphic with-filter">
+                    <div class="lt-vapp-widget-filter">
+                        <select>
+                            <option>Ojete</option>
+                        </select>
+                        <select>
+                            <option>Ojete</option>
+                        </select>
+                    </div>
+                </div>
+            </article>
+
+            <article class="lt-vapp-widget md-6 lg-4">
+                <header class="lt-vapp-widget-header">
+                    <h3>Widget 2 Title</h3>
+                    <p>Widget Description</p>
+                    <nav class="lt-vapp-widget-options">
+                        <span class="lt-vapp-widget-collapser lticon-vapp_expand"></span>
+                        <span class="lt-vapp-widget-menu-launcher lticon-thin-0069a_menu_hambuger_bold"></span>
+                        <ul>
+                            <li>
+                                <i class="lticon-polaroid_picture_image_photo"></i>
+                                <span>Capturar gráfico</span>
+                            </li>
+                            <li>
+                                <i class="lticon-computer_laptop_download"></i>
+                                <span>Descargar datos</span>
+                            </li>
+                            <li>
+                                <i class="lticon-search_find_zoom2"></i>
+                                <span>Zoom</span>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+                <div class="lt-vapp-widget-graphic"></div>
+            </article>
+
+            <article class="lt-vapp-widget lg-4">
+                <header class="lt-vapp-widget-header">
+                    <h3>Widget 3 Title</h3>
+                    <p>Widget Description</p>
+                    <nav class="lt-vapp-widget-options">
+                        <span class="lt-vapp-widget-collapser lticon-vapp_expand"></span>
+                        <span class="lt-vapp-widget-menu-launcher lticon-thin-0069a_menu_hambuger_bold"></span>
+                        <ul>
+                            <li>
+                                <i class="lticon-polaroid_picture_image_photo"></i>
+                                <span>Capturar gráfico</span>
+                            </li>
+                            <li>
+                                <i class="lticon-computer_laptop_download"></i>
+                                <span>Descargar datos</span>
+                            </li>
+                            <li>
+                                <i class="lticon-search_find_zoom2"></i>
+                                <span>Zoom</span>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+                <div class="lt-vapp-widget-graphic"></div>
+            </article>
+
+            <article class="lt-vapp-highlight">
+
+                <div class="lt-vapp-highlight-item lg-4">
+                    <span class="lt-vapp-highlight-icon lticon-time_watch_clock_wall"></span>
+                    <div class="lt-vapp-highlight-info">
+                        <div class="lt-vapp-highlight-title">
+                            <h5>Nº de usuarios</h5>
+                            <span class="lt-vapp-highlight-details lticon-information_about" about="thisWidget"></span>
+                        </div>
+                        <h4 class="lt-vapp-highlight-data">
+                            <span class="lt-vapp-highlight-data-value">224.576</span>
+                            <span class="lt-vapp-highlight-data-unit">usuarios</span>
+                        </h4>
+                    </div>
+                </div>
+
+                <div class="lt-vapp-highlight-item lg-4">
+                    <span class="lt-vapp-highlight-icon lticon-time_watch_clock_wall"></span>
+                    <div class="lt-vapp-highlight-info">
+                        <div class="lt-vapp-highlight-title">
+                            <h5>Nº de usuarios</h5>
+                            <span class="lt-vapp-highlight-details lticon-information_about" about="thisWidget"></span>
+                        </div>
+                        <h4 class="lt-vapp-highlight-data">
+                            <span class="lt-vapp-highlight-data-value">224.576</span>
+                            <span class="lt-vapp-highlight-data-unit">usuarios</span>
+                        </h4>
+                    </div>
+                </div>
+
+                <div class="lt-vapp-highlight-item lg-4">
+                    <span class="lt-vapp-highlight-icon lticon-time_watch_clock_wall"></span>
+                    <div class="lt-vapp-highlight-info">
+                        <div class="lt-vapp-highlight-title">
+                            <h5>Nº de usuarios</h5>
+                            <span class="lt-vapp-highlight-details lticon-information_about" about="thisWidget"></span>
+                        </div>
+                        <h4 class="lt-vapp-highlight-data">
+                            <span class="lt-vapp-highlight-data-value">224.576</span>
+                            <span class="lt-vapp-highlight-data-unit">usuarios</span>
+                        </h4>
+                    </div>
+                </div>
+
+            </article>
+
+            <article class="lt-vapp-widget sm-6">
+                <header class="lt-vapp-widget-header">
+                    <h3>Widget 4 Title</h3>
+                    <p>Widget Description</p>
+                    <nav class="lt-vapp-widget-options">
+                        <span class="lt-vapp-widget-collapser lticon-vapp_expand"></span>
+                        <span class="lt-vapp-widget-menu-launcher lticon-thin-0069a_menu_hambuger_bold"></span>
+                        <ul>
+                            <li>
+                                <i class="lticon-polaroid_picture_image_photo"></i>
+                                <span>Capturar gráfico</span>
+                            </li>
+                            <li>
+                                <i class="lticon-computer_laptop_download"></i>
+                                <span>Descargar datos</span>
+                            </li>
+                            <li>
+                                <i class="lticon-search_find_zoom2"></i>
+                                <span>Zoom</span>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+                <div class="lt-vapp-widget-graphic"></div>
+            </article>
+
+            <article class="lt-vapp-widget sm-6">
+                <header class="lt-vapp-widget-header">
+                    <h3>Widget 5 Title</h3>
+                    <p>Widget Description</p>
+                    <nav class="lt-vapp-widget-options">
+                        <span class="lt-vapp-widget-collapser lticon-vapp_expand"></span>
+                        <span class="lt-vapp-widget-menu-launcher lticon-thin-0069a_menu_hambuger_bold"></span>
+                        <ul>
+                            <li>
+                                <i class="lticon-polaroid_picture_image_photo"></i>
+                                <span>Capturar gráfico</span>
+                            </li>
+                            <li>
+                                <i class="lticon-computer_laptop_download"></i>
+                                <span>Descargar datos</span>
+                            </li>
+                            <li>
+                                <i class="lticon-search_find_zoom2"></i>
+                                <span>Zoom</span>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+                <div class="lt-vapp-widget-graphic"></div>
+            </article>
+
+            <article class="lt-vapp-widget md-4">
+                <header class="lt-vapp-widget-header">
+                    <h3>Widget 6 Title</h3>
+                    <p>Widget Description</p>
+                    <nav class="lt-vapp-widget-options">
+                        <span class="lt-vapp-widget-collapser lticon-vapp_expand"></span>
+                        <span class="lt-vapp-widget-menu-launcher lticon-thin-0069a_menu_hambuger_bold"></span>
+                        <ul>
+                            <li>
+                                <i class="lticon-polaroid_picture_image_photo"></i>
+                                <span>Capturar gráfico</span>
+                            </li>
+                            <li>
+                                <i class="lticon-computer_laptop_download"></i>
+                                <span>Descargar datos</span>
+                            </li>
+                            <li>
+                                <i class="lticon-search_find_zoom2"></i>
+                                <span>Zoom</span>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+                <div class="lt-vapp-widget-graphic"></div>
+            </article>
+
+            <article class="lt-vapp-widget md-8">
+                <header class="lt-vapp-widget-header">
+                    <h3>Widget 7 Title</h3>
+                    <p>Widget Description</p>
+                    <nav class="lt-vapp-widget-options">
+                        <span class="lt-vapp-widget-collapser lticon-vapp_expand"></span>
+                        <span class="lt-vapp-widget-menu-launcher lticon-thin-0069a_menu_hambuger_bold"></span>
+                        <ul>
+                            <li>
+                                <i class="lticon-polaroid_picture_image_photo"></i>
+                                <span>Capturar gráfico</span>
+                            </li>
+                            <li>
+                                <i class="lticon-computer_laptop_download"></i>
+                                <span>Descargar datos</span>
+                            </li>
+                            <li>
+                                <i class="lticon-search_find_zoom2"></i>
+                                <span>Zoom</span>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+                <div class="lt-vapp-widget-graphic"></div>
+            </article>
+
+            <article class="lt-vapp-widget md-12">
+                <header class="lt-vapp-widget-header">
+                    <h3>Widget 8 Title</h3>
+                    <p>Widget Description</p>
+                    <nav class="lt-vapp-widget-options">
+                        <span class="lt-vapp-widget-collapser lticon-vapp_expand"></span>
+                        <span class="lt-vapp-widget-menu-launcher lticon-thin-0069a_menu_hambuger_bold"></span>
+                        <ul>
+                            <li>
+                                <i class="lticon-polaroid_picture_image_photo"></i>
+                                <span>Capturar gráfico</span>
+                            </li>
+                            <li>
+                                <i class="lticon-computer_laptop_download"></i>
+                                <span>Descargar datos</span>
+                            </li>
+                            <li>
+                                <i class="lticon-search_find_zoom2"></i>
+                                <span>Zoom</span>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+                <div class="lt-vapp-widget-graphic"></div>
+            </article>
+        </section>
+
+        <section class="lt-vapp-section custom-background" toSection="Section22">
+            <h3 class="lt-vapp-section-title big">
+                <i class="lticon-analytics_presentation_statistics_graph"></i>
+                <span>Title 2</span>
+                <span class="lt-vapp-section-collapser lticon-vapp_expand"></span>
+            </h3>
+
+            <article class="lt-vapp-widget sm-4">
+                <header class="lt-vapp-widget-header">
+                    <h3>Widget 9 Title</h3>
+                    <p>Widget Description</p>
+                    <nav class="lt-vapp-widget-options">
+                        <span class="lt-vapp-widget-collapser lticon-vapp_expand"></span>
+                        <span class="lt-vapp-widget-menu-launcher lticon-thin-0069a_menu_hambuger_bold"></span>
+                        <ul>
+                            <li>
+                                <i class="lticon-polaroid_picture_image_photo"></i>
+                                <span>Capturar gráfico</span>
+                            </li>
+                            <li>
+                                <i class="lticon-computer_laptop_download"></i>
+                                <span>Descargar datos</span>
+                            </li>
+                            <li>
+                                <i class="lticon-search_find_zoom2"></i>
+                                <span>Zoom</span>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+                <div class="lt-vapp-widget-graphic"></div>
+            </article>
+
+            <article class="lt-vapp-widget sm-8">
+                <header class="lt-vapp-widget-header">
+                    <h3>Widget 10 Title</h3>
+                    <p>Widget Description</p>
+                    <nav class="lt-vapp-widget-options">
+                        <span class="lt-vapp-widget-collapser lticon-vapp_expand"></span>
+                        <span class="lt-vapp-widget-menu-launcher lticon-thin-0069a_menu_hambuger_bold"></span>
+                        <ul>
+                            <li>
+                                <i class="lticon-polaroid_picture_image_photo"></i>
+                                <span>Capturar gráfico</span>
+                            </li>
+                            <li>
+                                <i class="lticon-computer_laptop_download"></i>
+                                <span>Descargar datos</span>
+                            </li>
+                            <li>
+                                <i class="lticon-search_find_zoom2"></i>
+                                <span>Zoom</span>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+                <div class="lt-vapp-widget-graphic"></div>
+            </article>
+        </section>
+    </main>
+
+    <main class="lt-vapp-main" toMain="Main3">
+
+        <section class="lt-vapp-section" toSection="Section31">
+            <h3 class="lt-vapp-section-title">
+                <i class="lticon-analytics_presentation_statistics_graph"></i>
+                <span>Title 1</span>
+                <span class="lt-vapp-section-collapser lticon-vapp_expand"></span>
+            </h3>
+
+            <article class="lt-vapp-widget md-6 lg-4">
+                <header class="lt-vapp-widget-header">
+                    <h3>Widget 1 Title</h3>
+                    <p>Widget Description</p>
+                    <nav class="lt-vapp-widget-options">
+                        <span class="lt-vapp-widget-collapser lticon-vapp_expand"></span>
+                        <span class="lt-vapp-widget-menu-launcher lticon-thin-0069a_menu_hambuger_bold"></span>
+                        <ul>
+                            <li>
+                                <i class="lticon-polaroid_picture_image_photo"></i>
+                                <span>Capturar gráfico</span>
+                            </li>
+                            <li>
+                                <i class="lticon-computer_laptop_download"></i>
+                                <span>Descargar datos</span>
+                            </li>
+                            <li>
+                                <i class="lticon-search_find_zoom2"></i>
+                                <span>Zoom</span>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+                <div class="lt-vapp-widget-graphic with-filter">
+                    <div class="lt-vapp-widget-filter">
+                        <select>
+                            <option>Ojete</option>
+                        </select>
+                        <select>
+                            <option>Ojete</option>
+                        </select>
+                    </div>
+                </div>
+            </article>
+
+            <article class="lt-vapp-widget md-6 lg-4">
+                <header class="lt-vapp-widget-header">
+                    <h3>Widget 2 Title</h3>
+                    <p>Widget Description</p>
+                    <nav class="lt-vapp-widget-options">
+                        <span class="lt-vapp-widget-collapser lticon-vapp_expand"></span>
+                        <span class="lt-vapp-widget-menu-launcher lticon-thin-0069a_menu_hambuger_bold"></span>
+                        <ul>
+                            <li>
+                                <i class="lticon-polaroid_picture_image_photo"></i>
+                                <span>Capturar gráfico</span>
+                            </li>
+                            <li>
+                                <i class="lticon-computer_laptop_download"></i>
+                                <span>Descargar datos</span>
+                            </li>
+                            <li>
+                                <i class="lticon-search_find_zoom2"></i>
+                                <span>Zoom</span>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+                <div class="lt-vapp-widget-graphic"></div>
+            </article>
+
+            <article class="lt-vapp-widget lg-4">
+                <header class="lt-vapp-widget-header">
+                    <h3>Widget 3 Title</h3>
+                    <p>Widget Description</p>
+                    <nav class="lt-vapp-widget-options">
+                        <span class="lt-vapp-widget-collapser lticon-vapp_expand"></span>
+                        <span class="lt-vapp-widget-menu-launcher lticon-thin-0069a_menu_hambuger_bold"></span>
+                        <ul>
+                            <li>
+                                <i class="lticon-polaroid_picture_image_photo"></i>
+                                <span>Capturar gráfico</span>
+                            </li>
+                            <li>
+                                <i class="lticon-computer_laptop_download"></i>
+                                <span>Descargar datos</span>
+                            </li>
+                            <li>
+                                <i class="lticon-search_find_zoom2"></i>
+                                <span>Zoom</span>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+                <div class="lt-vapp-widget-graphic"></div>
+            </article>
+
+            <article class="lt-vapp-highlight">
+
+                <div class="lt-vapp-highlight-item lg-4">
+                    <span class="lt-vapp-highlight-icon lticon-time_watch_clock_wall"></span>
+                    <div class="lt-vapp-highlight-info">
+                        <div class="lt-vapp-highlight-title">
+                            <h5>Nº de usuarios</h5>
+                            <span class="lt-vapp-highlight-details lticon-information_about" about="thisWidget"></span>
+                        </div>
+                        <h4 class="lt-vapp-highlight-data">
+                            <span class="lt-vapp-highlight-data-value">224.576</span>
+                            <span class="lt-vapp-highlight-data-unit">usuarios</span>
+                        </h4>
+                    </div>
+                </div>
+
+                <div class="lt-vapp-highlight-item lg-4">
+                    <span class="lt-vapp-highlight-icon lticon-time_watch_clock_wall"></span>
+                    <div class="lt-vapp-highlight-info">
+                        <div class="lt-vapp-highlight-title">
+                            <h5>Nº de usuarios</h5>
+                            <span class="lt-vapp-highlight-details lticon-information_about" about="thisWidget"></span>
+                        </div>
+                        <h4 class="lt-vapp-highlight-data">
+                            <span class="lt-vapp-highlight-data-value">224.576</span>
+                            <span class="lt-vapp-highlight-data-unit">usuarios</span>
+                        </h4>
+                    </div>
+                </div>
+
+                <div class="lt-vapp-highlight-item lg-4">
+                    <span class="lt-vapp-highlight-icon lticon-time_watch_clock_wall"></span>
+                    <div class="lt-vapp-highlight-info">
+                        <div class="lt-vapp-highlight-title">
+                            <h5>Nº de usuarios</h5>
+                            <span class="lt-vapp-highlight-details lticon-information_about" about="thisWidget"></span>
+                        </div>
+                        <h4 class="lt-vapp-highlight-data">
+                            <span class="lt-vapp-highlight-data-value">224.576</span>
+                            <span class="lt-vapp-highlight-data-unit">usuarios</span>
+                        </h4>
+                    </div>
+                </div>
+
+            </article>
+
+            <article class="lt-vapp-widget sm-6">
+                <header class="lt-vapp-widget-header">
+                    <h3>Widget 4 Title</h3>
+                    <p>Widget Description</p>
+                    <nav class="lt-vapp-widget-options">
+                        <span class="lt-vapp-widget-collapser lticon-vapp_expand"></span>
+                        <span class="lt-vapp-widget-menu-launcher lticon-thin-0069a_menu_hambuger_bold"></span>
+                        <ul>
+                            <li>
+                                <i class="lticon-polaroid_picture_image_photo"></i>
+                                <span>Capturar gráfico</span>
+                            </li>
+                            <li>
+                                <i class="lticon-computer_laptop_download"></i>
+                                <span>Descargar datos</span>
+                            </li>
+                            <li>
+                                <i class="lticon-search_find_zoom2"></i>
+                                <span>Zoom</span>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+                <div class="lt-vapp-widget-graphic"></div>
+            </article>
+
+            <article class="lt-vapp-widget sm-6">
+                <header class="lt-vapp-widget-header">
+                    <h3>Widget 5 Title</h3>
+                    <p>Widget Description</p>
+                    <nav class="lt-vapp-widget-options">
+                        <span class="lt-vapp-widget-collapser lticon-vapp_expand"></span>
+                        <span class="lt-vapp-widget-menu-launcher lticon-thin-0069a_menu_hambuger_bold"></span>
+                        <ul>
+                            <li>
+                                <i class="lticon-polaroid_picture_image_photo"></i>
+                                <span>Capturar gráfico</span>
+                            </li>
+                            <li>
+                                <i class="lticon-computer_laptop_download"></i>
+                                <span>Descargar datos</span>
+                            </li>
+                            <li>
+                                <i class="lticon-search_find_zoom2"></i>
+                                <span>Zoom</span>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+                <div class="lt-vapp-widget-graphic"></div>
+            </article>
+
+            <article class="lt-vapp-widget md-4">
+                <header class="lt-vapp-widget-header">
+                    <h3>Widget 6 Title</h3>
+                    <p>Widget Description</p>
+                    <nav class="lt-vapp-widget-options">
+                        <span class="lt-vapp-widget-collapser lticon-vapp_expand"></span>
+                        <span class="lt-vapp-widget-menu-launcher lticon-thin-0069a_menu_hambuger_bold"></span>
+                        <ul>
+                            <li>
+                                <i class="lticon-polaroid_picture_image_photo"></i>
+                                <span>Capturar gráfico</span>
+                            </li>
+                            <li>
+                                <i class="lticon-computer_laptop_download"></i>
+                                <span>Descargar datos</span>
+                            </li>
+                            <li>
+                                <i class="lticon-search_find_zoom2"></i>
+                                <span>Zoom</span>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+                <div class="lt-vapp-widget-graphic"></div>
+            </article>
+
+            <article class="lt-vapp-widget md-8">
+                <header class="lt-vapp-widget-header">
+                    <h3>Widget 7 Title</h3>
+                    <p>Widget Description</p>
+                    <nav class="lt-vapp-widget-options">
+                        <span class="lt-vapp-widget-collapser lticon-vapp_expand"></span>
+                        <span class="lt-vapp-widget-menu-launcher lticon-thin-0069a_menu_hambuger_bold"></span>
+                        <ul>
+                            <li>
+                                <i class="lticon-polaroid_picture_image_photo"></i>
+                                <span>Capturar gráfico</span>
+                            </li>
+                            <li>
+                                <i class="lticon-computer_laptop_download"></i>
+                                <span>Descargar datos</span>
+                            </li>
+                            <li>
+                                <i class="lticon-search_find_zoom2"></i>
+                                <span>Zoom</span>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+                <div class="lt-vapp-widget-graphic"></div>
+            </article>
+
+            <article class="lt-vapp-widget md-12">
+                <header class="lt-vapp-widget-header">
+                    <h3>Widget 8 Title</h3>
+                    <p>Widget Description</p>
+                    <nav class="lt-vapp-widget-options">
+                        <span class="lt-vapp-widget-collapser lticon-vapp_expand"></span>
+                        <span class="lt-vapp-widget-menu-launcher lticon-thin-0069a_menu_hambuger_bold"></span>
+                        <ul>
+                            <li>
+                                <i class="lticon-polaroid_picture_image_photo"></i>
+                                <span>Capturar gráfico</span>
+                            </li>
+                            <li>
+                                <i class="lticon-computer_laptop_download"></i>
+                                <span>Descargar datos</span>
+                            </li>
+                            <li>
+                                <i class="lticon-search_find_zoom2"></i>
+                                <span>Zoom</span>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+                <div class="lt-vapp-widget-graphic"></div>
+            </article>
+        </section>
+
+        <section class="lt-vapp-section custom-background" toSection="Section32">
+            <img class="lt-vapp-oblique-top" src="#">
+            <h3 class="lt-vapp-section-title big">
+                <i class="lticon-analytics_presentation_statistics_graph"></i>
+                <span>Title 2</span>
+                <span class="lt-vapp-section-collapser lticon-vapp_expand"></span>
+            </h3>
+
+            <article class="lt-vapp-widget sm-4">
+                <header class="lt-vapp-widget-header">
+                    <h3>Widget 9 Title</h3>
+                    <p>Widget Description</p>
+                    <nav class="lt-vapp-widget-options">
+                        <span class="lt-vapp-widget-collapser lticon-vapp_expand"></span>
+                        <span class="lt-vapp-widget-menu-launcher lticon-thin-0069a_menu_hambuger_bold"></span>
+                        <ul>
+                            <li>
+                                <i class="lticon-polaroid_picture_image_photo"></i>
+                                <span>Capturar gráfico</span>
+                            </li>
+                            <li>
+                                <i class="lticon-computer_laptop_download"></i>
+                                <span>Descargar datos</span>
+                            </li>
+                            <li>
+                                <i class="lticon-search_find_zoom2"></i>
+                                <span>Zoom</span>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+                <div class="lt-vapp-widget-graphic"></div>
+            </article>
+
+            <article class="lt-vapp-widget sm-8">
+                <header class="lt-vapp-widget-header">
+                    <h3>Widget 10 Title</h3>
+                    <p>Widget Description</p>
+                    <nav class="lt-vapp-widget-options">
+                        <span class="lt-vapp-widget-collapser lticon-vapp_expand"></span>
+                        <span class="lt-vapp-widget-menu-launcher lticon-thin-0069a_menu_hambuger_bold"></span>
+                        <ul>
+                            <li>
+                                <i class="lticon-polaroid_picture_image_photo"></i>
+                                <span>Capturar gráfico</span>
+                            </li>
+                            <li>
+                                <i class="lticon-computer_laptop_download"></i>
+                                <span>Descargar datos</span>
+                            </li>
+                            <li>
+                                <i class="lticon-search_find_zoom2"></i>
+                                <span>Zoom</span>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+                <div class="lt-vapp-widget-graphic"></div>
+            </article>
+            <img class="lt-vapp-oblique-bottom" src="#">
+        </section>
+    </main>
+    <div class="lt-vapp-overlay"></div>
+</div>
+
+<script src="../appUtils/ResizeSensor.js"></script>
+<script src="../appUtils/ElementQueries.js"></script>
+<script src="../appUtils/fullScreenshot.js"></script>
+<script src="../appUtils/vappUtils.js"></script>
+<script src="../appUtils/newTemplateUtils.js"></script>
+<script src="app.js"></script>

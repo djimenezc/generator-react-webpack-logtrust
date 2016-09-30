@@ -10,9 +10,16 @@ module.exports = [
   },
   {
     type: 'list',
-    name: 'style',
+    name: 'verticalAppType',
     message: 'Which type of vertical app do you want to build?',
     choices: utils.config.getChoices('verticalAppTypes'),
     default: utils.config.getDefaultChoice('verticalAppTypes')
+  },
+  {
+    type: 'list',
+    name: 'verticalAppTemplate',
+    message: 'Which type of template do you want to apply?',
+    choices: utils.config.getChoices('verticalAppTemplate'),
+    default: utils.config.getDefaultChoice('verticalAppTemplate')
   }
 ];

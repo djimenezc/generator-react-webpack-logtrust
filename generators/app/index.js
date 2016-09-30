@@ -64,7 +64,6 @@ module.exports = generator.Base.extend({
     mkdirp.sync(this.appName);
 
     // Generate our package.json. Make sure to also include the required dependencies for styles
-    // let defaultSettings = this.fs.readJSON(path.join(baseRootPath, 'package.json'));
     const packageSourceFile = this.templatePath('package.json');
     let defaultSettings = this.fs.readJSON(packageSourceFile);
 
@@ -109,7 +108,7 @@ module.exports = generator.Base.extend({
         // Copy all items to our root
         let fullPath = path.join(this.templatePath(), item);
         if (fs.lstatSync(fullPath).isDirectory()) {
-          this.bulkDirectory(item, `${this.appName}/${item}`);
+          this.bulkDirectory(item, `${this.appName}/${item}`, null);
         } else {
           this.copy(item, `${this.appName}/${item}`);
         }
@@ -134,7 +133,6 @@ module.exports = generator.Base.extend({
     this.destinationRoot(path.join(this.destinationRoot(), '/' + this.appDir));
 
     // Set needed keys into config
-
     this.config.set('appName', this.appName);
     this.config.set('appPath', __dirname);
     this.config.set('appDir', this.appName);

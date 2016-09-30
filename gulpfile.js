@@ -26,7 +26,7 @@ gulp.task('pre-test', function () {
     'generators/**/*.js',
     '!generators/**/templates/**'
   ])
-    .pipe(excludeGitIgnore())
+    // .pipe(excludeGitIgnore())
     .pipe(istanbul({
       includeUntested: true
     }))

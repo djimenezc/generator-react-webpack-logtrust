@@ -32,7 +32,8 @@ module.exports = generator.Base.extend({
     if (!this.options['skip-welcome-message']) {
       // Have Yeoman greet the user.
       this.log(yoSay(
-        'Welcome to the great ' + chalk.red('generator-washemo-20') + ' generator!'
+        'Welcome to the great ' + chalk.red('generator-washemo-20')
+        + ' verticalAppLegacy generator!'
       ));
     }
   },
@@ -50,6 +51,8 @@ module.exports = generator.Base.extend({
 
       // Set needed global vars for yo
       this.appName = props.appName;
+      this.verticalAppType = props.verticalAppType;
+      this.verticalAppTemplate = props.verticalAppTemplate;
       this.generatedWithVersion = packageInfo.version.split('.').unshift();
 
     }.bind(this));
@@ -71,7 +74,13 @@ module.exports = generator.Base.extend({
     ];
 
     // Get all files in our repo and copy the ones we should
-    fs.readdir(this.templatePath(), (err, items) => {
+
+    const templateFolder = this.templatePath(this.verticalAppTemplate);
+
+    this.log(`Building using ${this.verticalAppTemplate} template ${templateFolder}`);
+
+
+    fs.readdir(this.templatePath(this.verticalAppTemplate), (err, items) => {
 
       for (let item of items) {
 
@@ -81,11 +90,12 @@ module.exports = generator.Base.extend({
         }
 
         // Copy all items to our root
-        let fullPath = path.join(this.templatePath(), item);
+        let fullPath = path.join(templateFolder, item);
+
         if (fs.lstatSync(fullPath).isDirectory()) {
-          this.bulkDirectory(item, `${this.appName}/${item}`);
+          this.bulkDirectory(`${this.verticalAppTemplate}/${item}`, `${this.appName}/${item}`,null);
         } else {
-          this.copy(item, `${this.appName}/${item}`);
+          this.copy(`${this.verticalAppTemplate}/${item}`, `${this.appName}/${item}`);
         }
       }
     });
@@ -93,5 +103,9 @@ module.exports = generator.Base.extend({
   },
 
   install: function () {
+  },
+
+  end: function() {
+    this.log('App generated successfully!!! \n Good bye chap');
   }
 });
