@@ -1,0 +1,699 @@
+/* Fonts */
+
+@font-face {
+    font-family: 'movistarplus-bold';
+    src: url('https://logtrust-static.s3.amazonaws.com/reseller/movistar%2B/fonts/futura-bold-webfont.eot');
+    src: url('https://logtrust-static.s3.amazonaws.com/reseller/movistar%2B/fonts/futura-bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('https://logtrust-static.s3.amazonaws.com/reseller/movistar%2B/fonts/futura-bold-webfont.woff2') format('woff2'),
+    url('https://logtrust-static.s3.amazonaws.com/reseller/movistar%2B/fonts/futura-bold-webfont.woff') format('woff'),
+    url('https://logtrust-static.s3.amazonaws.com/reseller/movistar%2B/fonts/futura-bold-webfont.ttf') format('truetype'),
+    url('https://logtrust-static.s3.amazonaws.com/reseller/movistar%2B/fonts/futura-bold-webfont.svg#futurabold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'movistarplus-book';
+    src: url('https://logtrust-static.s3.amazonaws.com/reseller/movistar%2B/fonts/futura-book-webfont.eot');
+    src: url('https://logtrust-static.s3.amazonaws.com/reseller/movistar%2B/fonts/futura-book-webfont.eot?#iefix') format('embedded-opentype'),
+    url('https://logtrust-static.s3.amazonaws.com/reseller/movistar%2B/fonts/futura-book-webfont.woff2') format('woff2'),
+    url('https://logtrust-static.s3.amazonaws.com/reseller/movistar%2B/fonts/futura-book-webfont.woff') format('woff'),
+    url('https://logtrust-static.s3.amazonaws.com/reseller/movistar%2B/fonts/futura-book-webfont.ttf') format('truetype'),
+    url('https://logtrust-static.s3.amazonaws.com/reseller/movistar%2B/fonts/futura-book-webfont.svg#futura_bookregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.lt-vapp.theme-imagenio  {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.theme-imagenio .lt-vapp-overlay    {
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.theme-imagenio .lt-vapp-header {
+    background-image: url("https://logtrust-static.s3.amazonaws.com/reseller/niu/img/niu_back_1.jpg");
+    background-position: top;
+}
+
+.theme-imagenio .lt-vapp-menu   {
+    background-color: #fff;
+    -webkit-box-shadow: 0 5px 0 0 rgba(0,0,0,.1);
+    -moz-box-shadow: 0 5px 0 0 rgba(0,0,0,.1);
+    box-shadow: 0 4px 0 0 rgba(0,0,0,.1);
+}
+
+.theme-imagenio .lt-vapp-logtrust-powered   {
+    color: #fff;
+    background-color: rgba(0,0,0,.2);
+    transform: scale(1.4) !important;
+    padding: 5px 15px 5px 15px;
+    right: 3% !important;
+}
+
+.theme-imagenio .lt-vapp-logtrust-powered figcaption {
+    color: #ffffff !important ;
+}
+
+.theme-imagenio .lt-vapp-details {
+    background: rgba(220, 220, 218, 0.41);
+    border-top: 1px solid rgba(40, 40, 40, 0.10);
+    font-family: movistarplus-bold;
+    text-align: center;
+    padding: ;
+    font-size: 12px;
+    box-sizing: border-box;
+    line-height: 20px;
+    color: #707070;
+}
+
+.theme-imagenio .lt-vapp-details span    {
+    color: #282828;
+}
+
+.theme-imagenio .lt-vapp-menu-main > li.scroll-menu-open,
+.theme-imagenio .lt-vapp-menu-main > li:hover {
+    color: #c8005a;
+}
+
+.theme-imagenio .lt-vapp-menu-main > li.active:not(.scroll-menu-open) {
+    color: #c8005a;
+    box-shadow: 0 5px 0 0 #c8005a;
+}
+
+.theme-imagenio .lt-vapp-menu-main > li.active.hasMenu:after {
+    border-radius: 100%;
+    bottom: -10px;
+    left: -1px;
+    background: #282828;
+    color: #fff;
+}
+
+.theme-imagenio .lt-vapp-menu-main > li.active.scroll-menu-open    {
+    background-color: #282828;
+}
+
+.theme-imagenio .lt-vapp-menu-main .lt-vapp-menu-item-name > span {
+    font-family: movistarplus-bold;
+    font-size: 14px;
+}
+
+.theme-imagenio .lt-vapp-menu-scroll {
+    background-color: #282828;
+    color: #fff;
+}
+
+.theme-imagenio .lt-vapp-menu-scroll-titles {
+    border-color: #848484;
+}
+
+.theme-imagenio .lt-vapp-menu-scroll-titles span {
+    color: #848484;
+}
+
+.theme-imagenio .lt-vapp-menu-scroll li {
+    font-family: movistarplus-bold;
+}
+
+.theme-imagenio .lt-vapp-menu-scroll li:hover   {
+    background-color: #363636;
+}
+
+.theme-imagenio .lt-vapp-menu-scroll li:hover:before   {
+    background-color: #c8005a;
+}
+
+.theme-imagenio .lt-vapp-menu-preferences    {
+    background-color: #fff;
+}
+
+.theme-imagenio .lt-vapp-menu-preferences li:hover {
+    background-color: #f4f4f4;
+}
+
+.theme-imagenio .lt-vapp-menu-preferences li {
+    border-color: #DCDCDA;
+}
+
+.theme-imagenio .lt-vapp-menu-preferences li.lt-vapp-options-button.active span   {
+    background-color: #282828;
+    color: #fff;
+}
+
+.theme-imagenio .lt-vapp-config {
+    background-color: #fff;
+}
+
+.theme-imagenio .lt-vapp-config > p {
+    background-color: #282828;
+}
+
+.theme-imagenio .lt-vapp-config > h4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto 5px auto;
+}
+
+.theme-imagenio .lt-vapp-config > h4 i {
+    color: #5A5A5A;
+}
+
+.theme-imagenio .lt-vapp-config > h4 span {
+    color: #000;
+    font-family: movistarplus-bold;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 0 0 0 8px;
+}
+
+.theme-imagenio .lt-vapp-config > p i {
+    background-color: #fff;
+}
+
+.theme-imagenio .lt-vapp-config > p span {
+    color: #fff;
+}
+
+.theme-imagenio .lt-vapp-section-title  {
+    background-color: #fff;
+}
+
+.theme-imagenio .lt-vapp-section-title > span:first-of-type  {
+    font-family: movistarplus-bold;
+}
+
+
+.theme-imagenio:not(.compact).bordered .lt-vapp-section .lt-vapp-section-title  {
+    color: #000;
+    border: none;
+    padding-bottom: 18px;
+    position: relative;
+}
+
+.theme-imagenio:not(.compact).bordered .lt-vapp-section-title span:first-of-type:after,
+.theme-imagenio:not(.compact).bordered .lt-vapp-section-title:after,
+.theme-imagenio:not(.compact).bordered .lt-vapp-section-title:before {
+    content: '';
+    height: 15px;
+    position: absolute;
+    bottom: 0;
+    border-color: #f5e614;
+    box-sizing: border-box;
+}
+
+.theme-imagenio:not(.compact).bordered .lt-vapp-section-title:before {
+    width: 22px;
+    left: 0;
+    border-top: 5px solid #f5e614;
+}
+
+.theme-imagenio:not(.compact).bordered .lt-vapp-section-title:after {
+    width: 15px;
+    left: 22px;
+    border: 5px solid #f5e614;
+    border-top: none;
+}
+
+.theme-imagenio:not(.compact).bordered .lt-vapp-section-title span:first-of-type:after {
+    right: 0;
+    left: 37px;
+    border-top: 5px solid #f5e614;
+}
+
+.theme-imagenio .lt-vapp-section .lt-vapp-widget-header {
+    background-color: #fff;
+    border-color: #dddddd;
+}
+
+.theme-imagenio .lt-vapp-widget-header h3 {
+    font-family: movistarplus-bold;
+    text-transform: none;
+    color: #333;
+}
+
+.theme-imagenio .lt-vapp-widget-header p {
+    color: #5A5A5A;
+}
+
+.theme-imagenio .lt-vapp-widget-options > span {
+    color: #282828;
+}
+
+.theme-imagenio .lt-vapp-widget-options > span:hover,
+.theme-imagenio .lt-vapp-section-title > span.lt-vapp-section-collapser:hover,
+.theme-imagenio .lt-vapp-widget-options > span.hasMenuOpen   {
+    color: #c8005a;
+}
+
+.theme-imagenio.expanded-widget-menu .lt-vapp-widget-options > ul > li i    {
+    font-size: 15px;
+}
+
+.theme-imagenio .lt-vapp-widget-filter  {
+    background-color: rgb(214, 214, 214);
+}
+
+.theme-imagenio .lt-vapp-widget-graphic {
+    background-color: #fff;
+}
+
+.theme-imagenio .lt-vapp-highlight-item {
+    background-color: #fff;
+}
+
+.theme-imagenio .lt-vapp-highlight-icon {
+    background-color: #282828;
+    color: #fff;
+}
+
+.theme-imagenio .lt-vapp-highlight-title h5,
+.theme-imagenio .lt-vapp-highlight-data {
+    font-family: logtrustSansBlack;
+}
+
+.theme-imagenio .lt-vapp-highlight-data span.lt-vapp-highlight-data-unit {
+    font-family: vodafone-bold;
+}
+
+/* Section titles: with border */
+
+.lt-vapp:not(.compact).theme-imagenio .lt-vapp-section-title.bordered {
+    border-color: #282828;
+}
+
+/* Custom Background  */
+
+.lt-vapp:not(.compact).theme-imagenio .lt-vapp-section.custom-background.bg2   {
+    background-image: url('https://logtrust-static.s3.amazonaws.com/reseller/movistar%2B/img/bg-cartela.jpg');
+    background-repeat: no-repeat;
+}
+
+.lt-vapp:not(.compact).theme-imagenio .lt-vapp-section.custom-background   {
+    background-image: url('https://logtrust-static.s3.amazonaws.com/reseller/movistar%2B/img/green_back.jpg');
+    background-repeat: no-repeat;
+}
+
+.lt-vapp:not(.compact).theme-imagenio .lt-vapp-section.custom-background .lt-vapp-widget-header,
+.lt-vapp:not(.compact):not(.bordered).theme-imagenio .lt-vapp-section.custom-background .lt-vapp-section-title    {
+    background-color: rgba(0,0,0,0.40);
+}
+
+.lt-vapp:not(.compact).theme-imagenio .lt-vapp-section.custom-background  .lt-vapp-widget-graphic  {
+    background-color: rgba(37,37,37,0.75);
+}
+
+.lt-vapp:not(.compact).theme-imagenio .lt-vapp-section.custom-background .lt-vapp-widget-header h3,
+.lt-vapp:not(.compact).theme-imagenio .lt-vapp-section.custom-background .lt-vapp-widget-options > span:not(:hover):not(.hasMenuOpen),
+.lt-vapp:not(.compact).theme-imagenio .lt-vapp-section.custom-background .lt-vapp-section-title {
+    color: #fff;
+}
+
+.lt-vapp:not(.compact).theme-imagenio .lt-vapp-section.custom-background .lt-vapp-widget-header p {
+    color: #bbb;
+}
+
+/* Widgets: Options Menu visible */
+
+.theme-imagenio.expanded-widget-menu .lt-vapp-widget-options > ul > li:not(:last-child) {
+    border-color: #282828;
+}
+
+.theme-imagenio.expanded-widget-menu .lt-vapp-widget-options > ul > li    {
+    color: #282828;
+}
+
+.theme-imagenio.expanded-widget-menu .lt-vapp-widget-options > ul > li:hover  {
+    background-color: #f4f4f4;
+}
+
+.theme-imagenio.expanded-widget-menu .lt-vapp-section.custom-background .lt-vapp-widget-options > ul > li:not(:last-child) {
+    border-color: #fff;
+}
+
+.theme-imagenio.expanded-widget-menu .lt-vapp-section.custom-background .lt-vapp-widget-options > ul > li    {
+    color: #fff;
+}
+
+.theme-imagenio.expanded-widget-menu .lt-vapp-section.custom-background .lt-vapp-widget-options > ul > li:hover  {
+    background-color: rgba(255,255,255, 0.07);
+}
+
+/* Widgets: Options Menu collapsed */
+
+.theme-imagenio:not(.expanded-widget-menu) .lt-vapp-widget-options > ul {
+    border-color: #d6d6d6;
+    box-shadow: 0px 3px 4px -2px #e0e0e0;
+}
+
+.theme-imagenio:not(.expanded-widget-menu) .lt-vapp-widget-options > ul:before {
+    background-color: #c8005a;
+}
+
+.theme-imagenio:not(.expanded-widget-menu) .lt-vapp-widget-options > ul:after {
+    background-color: #c8005a;
+}
+
+.theme-imagenio:not(.expanded-widget-menu) .lt-vapp-widget-options > ul > li {
+    background-color: #f3f4f5;
+    border-color: #d6d6d6;
+}
+
+.theme-imagenio:not(.expanded-widget-menu) .lt-vapp-widget-options > ul > li:hover {
+    background-color: #d6d6d6;
+    color: #7b7b7b;
+}
+
+.theme-imagenio:not(.expanded-widget-menu) .lt-vapp-widget-options > ul > li i {
+    color: #717171;
+    font-size: 18px;
+}
+
+.theme-imagenio:not(.expanded-widget-menu) .lt-vapp-widget-options > ul > li span {
+    font-family: movistarplus-bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #717171;
+}
+
+/* Highlights module  */
+
+.theme-imagenio .lt-vapp-highlight-title {
+    background-color: rgb(188, 211, 102);
+    color: #fff;
+}
+
+.theme-imagenio .lt-vapp-highlight-data  span.lt-vapp-highlight-data-value {
+    color: #282828;
+}
+
+.theme-imagenio .lt-vapp-highlight-data span.lt-vapp-highlight-data-unit {
+    color: #A0A0A0;
+}
+
+.theme-imagenio .lt-vapp-highlight-details  {
+    background-color: #282828;
+}
+
+/* Compact view  */
+
+.lt-vapp.compact.theme-imagenio  {
+    background: #f4f4f4;
+}
+
+.lt-vapp.compact.theme-imagenio .lt-vapp-section,
+.lt-vapp.compact.theme-imagenio .lt-vapp-widget,
+.lt-vapp.compact.theme-imagenio .lt-vapp-section-title,
+.lt-vapp.compact.theme-imagenio .lt-vapp-highlight,
+.lt-vapp.compact.theme-imagenio .lt-vapp-highlight-item  {
+    border-color: #DCDCDA;
+}
+
+.lt-vapp.compact.theme-imagenio .lt-vapp-widget {
+    background-color: #fff;
+}
+
+.lt-vapp.compact.theme-imagenio .lt-vapp-highlight-title,
+.lt-vapp.compact.theme-imagenio .lt-vapp-highlight-details {
+    background-color: rgb(243, 244, 245);
+    color: #282828;
+}
+
+
+/*  Tables  */
+
+.theme-imagenio table th    {
+    font-family: movistarplus-bold;
+    background-color: #c8005a;
+}
+
+.theme-imagenio table th[scope="colgroup"]   {
+    background-color: #333333;
+    text-align: left;
+    padding: 2px 10px;
+}
+
+.theme-imagenio table th[scope="row"] {
+    text-align: right;
+    background-color: #a7a7a7;
+    border: none;
+    width: 25%;
+}
+
+.theme-imagenio table th:not(:last-child) {
+    border-color: #c87695;
+}
+
+.theme-imagenio table tbody tr:nth-child(odd)  {
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.theme-imagenio table tbody tr:nth-child(2n) {
+    background-color: #F5F5F5;
+    cursor: pointer;
+}
+
+.theme-imagenio table th,
+.theme-imagenio table td {
+    text-align: center;
+}
+
+.theme-imagenio .dataTables_paginate > a {
+    color: #7b7b7b;
+    transition: all .7s;
+}
+
+.theme-imagenio table.dataTable th:before    {
+    color: #ecc0d1;
+    transition: all .7s;
+}
+
+.theme-imagenio .dataTables_paginate > a:hover {
+    color: #c8005a;
+    opacity: .7;
+}
+
+/* CUSTOM MOVISTAR */
+
+.theme-imagenio .lt-vapp-header h2.lt-vapp-application_name:first-child    {
+    position: relative;
+    padding: 10px;
+    border: 5px solid #000;
+    color: #000;
+    background-color: rgba(255,255,255,.9);
+    font-size: 16px;
+    font-family: movistarplus-bold;
+    text-transform: uppercase;
+}
+
+.theme-imagenio .lt-vapp-header h2.lt-vapp-application_name:after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 15px;
+    width: 5px;
+    height: 10px;
+    border: 5px solid #000;
+    border-top: none;
+    background: #fff;
+    z-index: 10
+}
+
+.theme-imagenio .lt-vapp-menu > img  {
+    height: 30px;
+    padding: 10px 0 10px 20px;
+}
+
+.theme-imagenio .lt-vapp-header.small {
+    height: 140px !important ;
+}
+
+.theme-imagenio .lt-vapp-widget-graphic.generic-table table {
+    border-color: transparent !important ;
+}
+
+.theme-imagenio .lt-vapp-header.small + .lt-vapp-menu:not(.fixed-menu) {
+    top:140px !important ;
+}
+
+.theme-imagenio .lt-vapp-widget-graphic .highcharts-legend-item span {
+    line-height: 20px !important ;
+}
+.theme-imagenio g.highcharts-legend rect {
+    y: 7;
+}
+
+.theme-imagenio .select2-container--default .select2-selection--single {
+    background-color: #fff;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    width: 160px !important;
+    margin: 0 10px 0px 0 !important;
+}
+
+.theme-imagenio .lt-vapp-section .lt-vapp-widget-header .redisplay {
+    margin: 0 40px 0 0px;
+}
+
+.theme-imagenio .select2-container--default .select2-selection__arrow {
+    right: 10px !important;
+}
+
+/* Movistar Section Colors  */
+
+.theme-imagenio:not(.compact).bordered section[class*="theme-"]:not(.theme-yellow) .lt-vapp-section-title   {
+    color: #fff;
+}
+
+.theme-imagenio:not(.compact).bordered section[class*="theme-"]:not(.theme-yellow) .lt-vapp-section-title .lt-vapp-section-collapser:hover  {
+    color: #fff;
+    opacity: .7;
+}
+
+/* Pink Section theme */
+
+.theme-imagenio .lt-vapp-section.theme-pink {
+    background-color: #C80059;
+}
+
+/* Blue Section theme */
+.theme-imagenio .lt-vapp-section.theme-blue {
+    background-color: #0078EB;
+}
+
+/* Yellow Section theme */
+.theme-imagenio .lt-vapp-section.theme-yellow {
+    background-color: #f5e614;
+}
+
+.theme-imagenio:not(.compact).bordered .lt-vapp-section.theme-yellow .lt-vapp-section-title span:first-of-type:after,
+.theme-imagenio:not(.compact).bordered .lt-vapp-section.theme-yellow .lt-vapp-section-title:after,
+.theme-imagenio:not(.compact).bordered .lt-vapp-section.theme-yellow .lt-vapp-section-title:before {
+    border-color: #f09600;
+}
+
+/* Yellow Section theme */
+.theme-imagenio .lt-vapp-section.theme-darkYellow {
+    background-color: #f09600;
+}
+
+/* Green Section theme */
+.theme-imagenio .lt-vapp-section.theme-green {
+    background-color: #00C3B4;
+}
+
+/* Orange Section theme */
+.theme-imagenio .lt-vapp-section.theme-orange {
+    background-color: #ff6419
+}
+
+/* Orange Section theme */
+.theme-imagenio .lt-vapp-section.theme-black {
+    background-color: #191919
+}
+
+
+/* Forms Styling */
+
+.theme-imagenio .lt-form-title {
+    font-family: movistarplus-bold;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.theme-imagenio .theme-imagenio .lt-form-field label   {
+    font-family: movistarplus-bold;
+    font-size: 12px;
+}
+
+.lt-vapp-widget-graphic svg text    {
+    fill: #282828 !important;
+    text-shadow: none !important;
+}
+
+
+.lt-form-field-inline label {
+    margin-right: 10px;
+}
+
+
+/*  SELECT2 PLUGIN STYLES FIX */
+
+.lt-vapp .select2-container  {
+    max-width: 100%;
+    height: auto;
+}
+
+.lt-vapp .select2-container--default .select2-selection--single,
+.lt-vapp .select2-container--default .select2-selection--multiple {
+    border-radius: 0;
+}
+
+.lt-vapp .select2-container--default.select2-container--disabled .select2-selection--multiple    {
+    border-radius: 0;
+    background-color: #fff;
+}
+
+.lt-vapp .select2-container--default .select2-selection--multiple .select2-selection__rendered   {
+    padding: 10px;
+}
+
+/* Style for configurator */
+
+.lt-form-column-wrapper.warn {
+  background: #e5d209;
+}
+
+.lt-form-column-wrapper.error {
+  background: #d05858;
+}
+
+/*.lt-form-column-wrapper.ok {
+  background: #43b050
+}*/
+
+/* TABLAS DATATABLE */
+
+.customFilters {
+  margin: 0 0 10px 0;
+}
+
+.customFilters span,
+.customFilters input   {
+  margin: 0 5px 0 0;
+}
+
+.selectedTableRow   {
+  background-color: rgba(245, 230, 20, 0.4) !important;
+}
+
+/* TOGGLES */
+.toogleItem input.cmn-toggle-round + label {
+  width: 52px;
+  height: 17px;
+  background-color: transparent;
+  padding: 2px 0;
+  float: left;
+}
+
+.toogleItem input.cmn-toggle-round + label:after {
+  height: 20px;
+  width: 20px;
+}
+
+input.cmn-toggle-round + label:before {
+  background-color: #B4C4E0;
+  border: 1px solid #bfbfbf;
+}
+
+input.cmn-toggle-round:checked + label:before {
+  background-color: #2D3A64;
+}
+
+.toogleItem span {
+  padding-right: 30px;
+  padding-left: 5px;
+}
