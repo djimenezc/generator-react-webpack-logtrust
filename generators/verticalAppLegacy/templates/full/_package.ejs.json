@@ -6,7 +6,8 @@
     "url": "dorian2.lt.lg:/opt/git/appsVerticales.git"
   },
   "scripts": {
-    "postinstall": "bower install"
+    "postinstall": "bower install",
+    "start": "node_modules/.bin/gulp"
   },
   "author": "",
   "license": "ISC",

@@ -44,7 +44,7 @@
       {
         "name": "PoC",
         "value": "poc",
-        "message": "Pruebas de concepto para cuando estamos queriendo enseñar a un cliente"
+        "message": "Pruebas de concepto para cuando queremos enseñar a un cliente"
       },
       {
         "name": "Reseller",
@@ -54,7 +54,7 @@
       {
         "name": "Generic",
         "value": "generic",
-        "message": "App servirá para varios dominios (por ejemplo el firewall report) "
+        "message": "App utilizada en varios dominios (por ejemplo el firewall report) "
       },
       {
         "name": "Custom",
