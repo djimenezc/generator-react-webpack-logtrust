@@ -1,6 +1,6 @@
 {
   "name": "generator-washemo-20",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "Generador de aplicaciones verticales de Logtrust",
   "homepage": "http://google.com",
   "author": {
@@ -52,6 +52,9 @@
   "repository": "djimenezc/generator-washemo-20",
   "scripts": {
     "prepublish": "gulp prepublish",
+    "release:major": "changelog -M && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version major && npm publish && git push --follow-tags",
+    "release:minor": "changelog -m && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version minor && npm publish && git push --follow-tags",
+    "release:patch": "changelog -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version patch && npm publish && git push --follow-tags",
     "test": "gulp",
     "test:watch": "gulp default watch"
   },
