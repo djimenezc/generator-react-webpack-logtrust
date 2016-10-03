@@ -140,6 +140,6 @@ module.exports = generator.Base.extend({
 
     this.config.save();
 
-    this.log('App generated successfully!!! \n Good bye chap');
+    this.log('Good bye chap');
   }
 });

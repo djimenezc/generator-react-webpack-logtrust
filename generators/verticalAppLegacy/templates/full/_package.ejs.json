@@ -7,7 +7,8 @@
   },
   "scripts": {
     "postinstall": "bower install",
-    "start": "node_modules/.bin/gulp"
+    "start": "node_modules/.bin/gulp",
+    "dist": "gulp --production"
   },
   "author": "",
   "license": "ISC",

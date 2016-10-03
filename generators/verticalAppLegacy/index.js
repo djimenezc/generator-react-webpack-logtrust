@@ -133,7 +133,7 @@ module.exports = generator.Base.extend({
     }
   },
 
-  end: function(status) {
-    this.log('App generated successfully!!! \n Good bye chap', status);
+  end: function() {
+    this.log('Good bye chap');
   }
 });
