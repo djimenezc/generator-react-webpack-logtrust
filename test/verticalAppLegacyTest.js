@@ -19,6 +19,10 @@ describe('generator-washemo-20:verticalAppLegacy:simple', function () {
       'temp/app.js',
       'temp/index.html'
     ]);
+
+    assert.noFile([
+      'temp/package.json'
+    ])
   });
 });
 
@@ -38,7 +42,7 @@ describe('generator-washemo-20:verticalAppLegacy:full', function () {
       'temp/app.js',
       'temp/index.html',
       'temp/bower.json',
-      // 'temp/package.json',
+      'temp/package.json',
       'temp/README.md'
     ]);
   });

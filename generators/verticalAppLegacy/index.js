@@ -81,7 +81,6 @@ module.exports = generator.Base.extend({
 
     this.log(`Building using ${this.verticalAppTemplate} template ${templateFolder}`);
 
-
     fs.readdir(this.templatePath(this.verticalAppTemplate), (err, items) => {
 
       for (let item of items) {
@@ -102,23 +101,39 @@ module.exports = generator.Base.extend({
       }
     });
 
-    pathExists(`${this.verticalAppTemplate}/package.ejs.json`).then(exists => {
-      console.log(exists);
-      // Copy the package.json filtered
-      this.fs.copyTpl(
-        this.templatePath(`${this.verticalAppTemplate}/_package.ejs.json`),
-        this.destinationPath(`${this.appName}/package.json`), {
-          name: this.appName
-        }
-      );
-    });
+    pathExists(this.templatePath(`${this.verticalAppTemplate}/_package.ejs.json`)).then(exists => {
 
+      if(exists) {
+        console.log(`${this.verticalAppTemplate}/_package.ejs.json exists!!! ${exists}`);
+        // Copy the package.json filtered
+        this.fs.copyTpl(
+          this.templatePath(`${this.verticalAppTemplate}/_package.ejs.json`),
+          this.destinationPath(`${this.appName}/package.json`), {
+            name: this.appName
+          }
+        );
+      }
+
+    });
   },
 
   install: function () {
+
+    if(this.verticalAppTemplate === 'simple') {
+      this.options['skip-install'] = true;
+    }
+
+    if (!this.options['skip-install']) {
+
+      mkdirp.sync(`${this.appName}/node_modules`);
+
+      this.runInstall('npm', [], {
+        prefix: this.destinationPath(this.appName)
+      });
+    }
   },
 
-  end: function() {
-    this.log('App generated successfully!!! \n Good bye chap');
+  end: function(status) {
+    this.log('App generated successfully!!! \n Good bye chap', status);
   }
 });

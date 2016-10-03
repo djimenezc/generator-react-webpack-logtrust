@@ -139,5 +139,7 @@ module.exports = generator.Base.extend({
     this.config.set('generatedWithVersion', this.generatedWithVersion);
 
     this.config.save();
+
+    this.log('App generated successfully!!! \n Good bye chap');
   }
 });
