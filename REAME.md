@@ -239,3 +239,15 @@ The available priorities are (in running order):
 * end - Called last, cleanup, say good bye, etc
 
 Follow these priorities guidelines and your generator will play nice with others.
+
+
+##Testing:
+
+See: 
+* https://github.com/yeoman/yeoman-assert
+* http://yeoman.io/authoring/testing.html
+
+To run tests just execute:
+```
+npm test
+```
