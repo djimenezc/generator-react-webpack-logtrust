@@ -9,6 +9,7 @@ let prompts = require('./prompts');
 let path = require('path');
 let fs = require('fs');
 const packageInfo = require('../../package.json');
+const pathExists = require('path-exists');
 
 //noinspection JSUnusedGlobalSymbols
 module.exports = generator.Base.extend({
@@ -70,6 +71,7 @@ module.exports = generator.Base.extend({
     let excludeList = [
       'node_modules',
       'package.json',
+      '_package.ejs.json',
       '.travis.yml'
     ];
 
@@ -98,6 +100,17 @@ module.exports = generator.Base.extend({
           this.copy(`${this.verticalAppTemplate}/${item}`, `${this.appName}/${item}`);
         }
       }
+    });
+
+    pathExists(`${this.verticalAppTemplate}/package.ejs.json`).then(exists => {
+      console.log(exists);
+      // Copy the package.json filtered
+      this.fs.copyTpl(
+        this.templatePath(`${this.verticalAppTemplate}/_package.ejs.json`),
+        this.destinationPath(`${this.appName}/package.json`), {
+          name: this.appName
+        }
+      );
     });
 
   },

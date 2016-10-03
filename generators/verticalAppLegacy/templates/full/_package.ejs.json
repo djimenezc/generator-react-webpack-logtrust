@@ -1,6 +1,6 @@
 {
-  "name": "apps-verticales",
-  "version": "1.0.0",
+  "name": "<%= name %>",
+  "version": "0.0.1",
   "repository": {
     "type": "git",
     "url": "dorian2.lt.lg:/opt/git/appsVerticales.git"
