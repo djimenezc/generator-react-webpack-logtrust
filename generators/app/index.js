@@ -15,9 +15,9 @@ module.exports = generator.Base.extend({
   // The name `constructor` is important here
   constructor: function () {
 
-    console.log('Generator Constructor');
     // Calling the super constructor is important so our generator is correctly set up
     generator.Base.apply(this, arguments);
+    this.log('Generator Constructor');
 
     // Make options available
     this.option('skip-welcome-message', {

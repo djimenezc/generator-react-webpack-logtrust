@@ -37,6 +37,10 @@ module.exports = generator.Base.extend({
         + ' verticalAppLegacy generator!'
       ));
     }
+
+    if (this.verticalAppTemplate === 'simple') {
+      this.options['skip-install'] = true;
+    }
   },
 
   prompting: function () {
@@ -94,7 +98,7 @@ module.exports = generator.Base.extend({
         let fullPath = path.join(templateFolder, item);
 
         if (fs.lstatSync(fullPath).isDirectory()) {
-          this.bulkDirectory(`${this.verticalAppTemplate}/${item}`, `${this.appName}/${item}`,null);
+          this.bulkDirectory(`${this.verticalAppTemplate}/${item}`, `${this.appName}/${item}`, null);
         } else {
           this.copy(`${this.verticalAppTemplate}/${item}`, `${this.appName}/${item}`);
         }
@@ -103,8 +107,8 @@ module.exports = generator.Base.extend({
 
     pathExists(this.templatePath(`${this.verticalAppTemplate}/_package.ejs.json`)).then(exists => {
 
-      if(exists) {
-        console.log(`${this.verticalAppTemplate}/_package.ejs.json exists!!! ${exists}`);
+      if (exists) {
+        this.log(`${this.verticalAppTemplate}/_package.ejs.json exists!!! ${exists}`);
         // Copy the package.json filtered
         this.fs.copyTpl(
           this.templatePath(`${this.verticalAppTemplate}/_package.ejs.json`),
@@ -119,10 +123,6 @@ module.exports = generator.Base.extend({
 
   install: function () {
 
-    if(this.verticalAppTemplate === 'simple') {
-      this.options['skip-install'] = true;
-    }
-
     if (!this.options['skip-install']) {
 
       mkdirp.sync(`${this.appName}/node_modules`);
@@ -133,7 +133,7 @@ module.exports = generator.Base.extend({
     }
   },
 
-  end: function() {
+  end: function () {
     this.log('Good bye chap');
   }
 });
